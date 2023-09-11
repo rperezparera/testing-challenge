@@ -18,6 +18,8 @@ A very simple website to test the speed of any provided website. The candidate n
 ## Deliver the exercises
 
 Fork the repository and commit your changes.
+Implement/automate the test cases for the RestAPI (exercise 1) and the Web site (exercise 2)
+
 Send an email with the fork url to Idoven when the technical test is done.
 
 Thanks and good luck!
