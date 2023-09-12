@@ -43,7 +43,7 @@ Use pytest as testing framework for Python.
     - Implement boundary tests (e.g., very long strings, negative numbers).
     - Implement data-driven tests with multiple sets of data.
 4. **Documentation**
-    - Create a README file that contains:
+    - Modify the README file to contains:
         1. An explanation of your testing strategy.
         2. Instructions on how to run the tests.
 5. **Bonus: Automation**

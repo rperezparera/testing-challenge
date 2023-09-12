@@ -2,7 +2,7 @@
 
 ## Objective
 
-Create all test cases to cover the funcionality of this Speed test: https://www.debugbear.com/test/website-speed
+Implement all test cases to cover the funcionality of this Speed test: https://www.debugbear.com/test/website-speed
 
 ## Challenge Description
 Use the Idoven url 'https://es.idoven.ai/' to evaluate the speed of our web site and create the full set of test cases (positive and negative testing) you consider enough to test this speed test tool.

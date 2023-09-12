@@ -5,9 +5,6 @@ app = Flask(__name__)
 # In-memory database
 books = []
 
-# Utility function to find a book by ID
-
-
 def find_book(book_id):
     return next((book for book in books if book['book_id'] == book_id), None)
 
