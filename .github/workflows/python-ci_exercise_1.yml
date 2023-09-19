@@ -1,0 +1,58 @@
+name: Python CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.10.6
+
+    - name: Install dependencies 1
+      run: pip install poetry
+      
+    - name: Install dependencies 2
+      run: pip install pytest
+
+    - name: Install dependencies 3
+      run: pip install pytest-html
+
+    - name: Install dependencies 4
+      run: pip install flask
+      
+    - name: Install dependencies 5
+      run: pip install jsondiff 
+
+    - name: Prepare tests
+      run: poetry config virtualenvs.create false
+      shell: bash        
+        
+    - name: Prepare tests
+      run: poetry install
+      shell: bash
+      
+    - name: Prepare tests
+      run: python Exercise1-API/book-store/api/bookstore_api.py &
+      shell: bash
+      
+    - name: Execute tests
+      run: |
+        cd Exercise1-API/book-store/tests 
+        pytest --html=report.html
+      shell: bash 
+      
+    - name: Upload test report
+      uses: actions/upload-artifact@v2
+      with:
+        name: test-reports
+        path: Exercise1-API/book-store/tests/report.html
